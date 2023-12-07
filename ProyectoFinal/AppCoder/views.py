@@ -37,13 +37,13 @@ def disfraces_buscar_view(request):
             return render(request, "AppCoder/disfraces_list.html", contexto)
 
 
-#def cursos_todos_view(request):
-#    todos_los_cursos = []
-#    for curso in Curso.objects.all():
-#        todos_los_cursos.append(curso)
+def disfraces_todos_view(request):
+    todos_los_disfraces = []
+    for disfraces in Disfraces.objects.all():
+        todos_los_disfraces.append(disfraces)
 
-#   contexto = {"cursos": todos_los_cursos}
-#    return render(request, "AppCoder/cursos_list.html", contexto)
+    contexto = {"disfraces": todos_los_disfraces}
+    return render(request, "AppCoder/disfraces_list.html", contexto)
 
 
 def disfraces_view(request):
@@ -53,7 +53,7 @@ def disfraces_view(request):
         form = disfracesFormulario()
         return render(
             request,
-            "AppCoder/disfraces_formulario_avanzado.html",
+            "AppCoder/disfraces.formulario_avanzado.html",
             context={"form": form}
         )
     else:
