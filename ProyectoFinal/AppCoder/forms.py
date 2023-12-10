@@ -2,14 +2,9 @@ from django import forms
 
 
 class disfracesbuscarFormulario(forms.Form):
-    disfraces = forms.CharField()
+    nombre = forms.CharField(max_length=30)
     precio = forms.IntegerField()
 
-
-class disfracesfiltrados(forms.Form):
-    disfraces = forms.CharField()
-
-
 class disfracesFormulario(forms.Form):
-    nombre = forms.CharField()
+    nombre = forms.CharField(max_length=30)
     precio = forms.IntegerField()

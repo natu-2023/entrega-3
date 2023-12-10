@@ -1,16 +1,13 @@
-
-
 {% extends "AppCoder/padre.html" %}
 
 
 {% block contenidoQueCambia %}
-Aquí va la lista de cursos!
+LISTA DE DISFRACES
 
-
-{% if disfraces %}
+{% if nombre %}
 <ul>
-    {% for disfraces in disfraces %}
-    <li>{{ <Disfraces.disfraces> }} ({{ Disfraces.precio }})</li>
+    {% for nombre in nombre %}
+    <li>{{ nombre.nombre }} ({{ nombre.precio }})</li>
     {% endfor %}
 </ul>
 {% endif %}

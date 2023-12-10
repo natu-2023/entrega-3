@@ -2,8 +2,8 @@
 
 
 {% block contenidoQueCambia %}
-    <body style="background-color: green;">
-        <form action="/AppCoder/disfraz_formulario_busqueda.html" method="POST">
+    <body style="background-color:  rgb(194, 218, 238);">
+        <form action="/AppCoder/disfraces_buscar.html" method="POST">
             {% csrf_token %}
             {{ form.as_table }}
             <input type="submit" value="Guardar">

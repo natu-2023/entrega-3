@@ -1,9 +1,10 @@
+
 {% extends "AppCoder/padre.html" %}
 
 
 {% block contenidoQueCambia %}
     <!DOCTYPE html>
-    <html lang="en">
+    <html lang="es">
 
     <head>
         <meta charset="utf-8">
@@ -12,8 +13,8 @@
         <title>Formulario</title>
     </head>
 
-    <body style="background-color: green;">
-        <form action="/AppCoder/disfraces.formulario_avanzado.html/" method="POST">
+    <body style="background-rgb(194, 218, 238);">
+        <form action="/AppCoder/disfraces_formulario.html/" method="POST">
             {% csrf_token %}
             {{ form.as_p }}
             <input type="submit" value="Guardar">
