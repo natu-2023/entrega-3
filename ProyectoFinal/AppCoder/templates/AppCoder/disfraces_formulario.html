@@ -14,7 +14,7 @@
     </head>
 
     <body style="background-rgb(194, 218, 238);">
-        <form action="/AppCoder/disfraces_formulario.html/" method="POST">
+        <form action="/AppCoder/disfraces/" method="POST">
             {% csrf_token %}
             {{ form.as_p }}
             <input type="submit" value="Guardar">
