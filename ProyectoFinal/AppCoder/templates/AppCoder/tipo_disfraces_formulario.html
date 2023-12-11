@@ -12,11 +12,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Formulario</title>
     </head>
-
     <body style="background-color: rgb(174, 206, 241);">
-        <form action="/AppCoder/disfraces/" method="POST">
+    <form action="/AppCoder/tipo_disfraces/" method="POST">
             {% csrf_token %}
+            
             {{ form.as_p }}
+
             <input type="submit" value="Guardar">
         </form>
     </body>

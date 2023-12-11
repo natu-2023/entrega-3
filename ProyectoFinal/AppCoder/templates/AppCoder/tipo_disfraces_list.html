@@ -1,0 +1,17 @@
+{% extends "AppCoder/padre.html" %}
+
+
+{% block contenidoQueCambia %}
+ LISTA DE DE DISFRACES( nombre, talle, cantidad)
+
+{% if clase %}
+<ul>
+    {% for clase in clase %}
+    <li>{{ clase.clase }} ({{ clase.talle}}) ({{ clase.cantidad}}) </li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+
+{% endblock %}
+

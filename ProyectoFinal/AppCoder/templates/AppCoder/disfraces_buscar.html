@@ -1,12 +1,34 @@
 {% extends "AppCoder/padre.html" %}
 
-
 {% block contenidoQueCambia %}
-    <body style="background-color:  rgb(194, 218, 238);">
-        <form action="/AppCoder/disfraces_buscar.html" method="POST">
-            {% csrf_token %}
-            {{ form.as_table }}
-            <input type="submit" value="Guardar">
-        </form>
-    </body>
+    <!DOCTYPE html>
+    <html lang="es">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Busqueda Disfraces</title>
+    </head>
+<body style="background-rgb (194, 218, 238);">
+ <form action="/AppCoder/disfraces_buscar/" method="GET">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Buscar">
+</form
+
+{% if disfraz %}
+   <h2>{{ disfraz.nombre }}</h2>
+    <p>Precio: ${{ disfraz.precio }}</p>
+{% endif %}
+
+{% if mensaje_error %}
+    <p>{{ mensaje_error }}</p>
+{% endif %}
+</body>
+
+</html>
 {% endblock %}
+
+
+
